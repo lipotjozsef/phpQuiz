@@ -16,6 +16,6 @@ _  __      __
 ## Main functions
 - Quizzes structure:
     - Gives four-answer questions
-    - Navigate through the quiz
-    - Retake the quiz as many times as you want
+    - Allows navigation through the quiz
+    - Lets users retake the quiz as many times as they want
 - Grades the quiz automaticly
