@@ -1,0 +1,7 @@
+Készíts egy Quiz oldalt.
+
+Min. 5 kérdés lehetőleg random sorrendben.
+Minden kérdésre négy válasz (A,B,C,D)
+Lehessen a kérdéseket lapozni (előre/vissza).
+A végén eredményhirdetés.
+Újraindítás lehetőség.
