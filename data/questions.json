@@ -1,0 +1,27 @@
+[
+    {
+        "question": "Milyen évet írunk?",
+        "answers": ["1926", "2018", "2025", "2026"],
+        "answerID": 3
+    },
+    {
+        "question": "Egy adott elemből radioaktív bomlás során új elem keletkezett. Milyen bomlás történhetett?",
+        "answers": ["Csak α-bomlás.", "Vagy α-, vagy β-bomlás.", "Csak γ-bomlás.", "Egyik sem."],
+        "answerID": 1
+    },
+    {
+        "question": "Melyik NEM minecraft biome?",
+        "answers": ["Twiligt Forest", "Flower Forest", "Taiga", "Mushroom Fields"],
+        "answerID": 0
+    },
+    {
+        "question": "Ki találta fel a Rubik kockát?",
+        "answers": ["Kocka Ernő", "Kiss Ádám", "Rubik Ernő", "Rubik Abdul"],
+        "answerID": 2
+    },
+    {
+        "question": "Mi az x/x² határértéke, ha x a végtelenbe tart?",
+        "answers": ["0", "-∞", "∞", "1"],
+        "answerID": 0
+    }
+]
