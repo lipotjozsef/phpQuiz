@@ -5,33 +5,40 @@ require_once __DIR__ . "/../Classes/Quiz.php";
 if (session_status() != PHP_SESSION_ACTIVE)
     return;
 
+if (!isset($_SESSION['user-data']))
+{
+    $_SESSION['user-data'] = [
+        'step' => 1,
+        'stat' => [],
+        'answers' => [],
+        'question_order' => []
+    ];
+}
+
+$questions = loadQuestions();
+
+if (empty($_SESSION['user-data']['question_order']) && !empty($questions)) {
+    $indices = array_keys($questions);
+    shuffle($indices); // Randomize the keys
+    $_SESSION['user-data']['question_order'] = $indices;
+}
+
 $step = $_SESSION['user-data']['step'] ?? 1;
 $stat = $_SESSION['user-data']['stat'] ?? [];
 $answers = $_SESSION['user-data']['answers'] ?? [];
+$questionOrder = $_SESSION['user-data']['question_order'];
 
 $m = "question";
-
-$questions = loadQuestions();
 $myQuiz = new Quiz($questions, $stat);
-
-if (!isset($_SESSION['user-data']))
-{
-    $_SESSION['user-data']['step'] = 1;
-    $_SESSION['user-data']['stat'] = [];
-    $_SESSION['user-data']['answers'] = [];
-}
 
 if ($_SERVER['REQUEST_METHOD'] == "POST")
 {
     if (isset($_POST["restart"]))
     {
         unset($_SESSION['user-data']);
-        unset($step);
-        unset($stat);
-        unset($answers);
         header("Location: " . $_SERVER["PHP_SELF"]);
+        exit;
     }
-
 
     if (isset($_POST["answer"]))
     {
@@ -60,9 +67,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
     $_SESSION['user-data']['step'] = $step;
 }
 
-$index = $step - 1;
-$givenAnswer = $answers[$index] ?? -1;
-$mainContent = $myQuiz->getQuestionHTML($index, $givenAnswer);
+$stepIndex = $step - 1;
+$actualQuestionIndex = $questionOrder[$stepIndex] ?? $stepIndex;
+
+$givenAnswer = $answers[$actualQuestionIndex] ?? -1;
+$mainContent = $myQuiz->getQuestionHTML($actualQuestionIndex, $stepIndex, $givenAnswer);
 
 function loadQuestions(): array
 {
@@ -73,9 +82,12 @@ function loadQuestions(): array
 
 function processAnswer(): void
 {
-    global $stat, $step, $myQuiz, $answers;
+    global $stat, $step, $myQuiz, $answers, $questionOrder;
     $answerID = intval($_POST["answer"]);
-    $index = $step - 1;
-    $stat = $myQuiz->givePoint($index, $answerID);
-    $answers[$index] = $answerID;
+    
+    $stepIndex = $step - 1;
+    $actualQuestionIndex = $questionOrder[$stepIndex] ?? $stepIndex;
+    
+    $stat = $myQuiz->givePoint($actualQuestionIndex, $answerID);
+    $answers[$actualQuestionIndex] = $answerID;
 }
