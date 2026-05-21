@@ -49,9 +49,9 @@ class Quiz
         return $this->questions[$index]->getQuestion();
     }
 
-    public function getQuestionHTML(int $index, int $givenAnswer): string
+    public function getQuestionHTML(int $index, int $stepIndex, int $givenAnswer): string
     {
-        $isLastQuesiton = $index == ($this->quizLength-1);
+        $isLastQuesiton = $stepIndex == ($this->quizLength-1);
         $completedAllQuestion = count($this->stat) == $this->quizLength;
         return $this->questions[$index]->formatQuestionHTML($givenAnswer, $isLastQuesiton, $completedAllQuestion);
     }
