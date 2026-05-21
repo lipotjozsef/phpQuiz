@@ -28,10 +28,12 @@ if(!defined('PROTECTED')){
                     <tbody>
                         <?php
                         $counter = 0;
-                        foreach($myQuiz->getStat() as $stat): 
-                            $passedQuestion = $stat == 1;
-                            $question = $myQuiz->getQuestion($counter);
-                            $answer = $myQuiz->getAnswer($counter, $answers[$counter]);
+                        foreach($myQuiz->getStat() as $index => $stat):
+                            $passedQuestion = ($stat == 1);
+                            $question = $myQuiz->getQuestion($index);
+
+                            $answer = $myQuiz->getAnswer($counter, $answers[$index]);
+
                             $emoji = $passedQuestion ? "✅" : "❌";
                             $counter++;
                         ?>
