@@ -4,7 +4,6 @@
 define("PROTECTED", "yes");
 session_start();
 
-require_once __DIR__ . "\Config\globals.php";
 require_once __DIR__ . "\Controllers\QuizController.php";
 
 ?>
