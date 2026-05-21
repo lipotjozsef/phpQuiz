@@ -6,7 +6,7 @@ _  __      __
 |_|\_\ \_/ |_/___|
 ```
 ---
-## Kvyz
+## Kvíz
 - a short php project for quiz taking
 
 ## Used technologies
