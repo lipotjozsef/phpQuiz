@@ -16,7 +16,7 @@ require_once __DIR__ . "\Controllers\QuizController.php";
     <title>Kvíz</title>
     <link rel="stylesheet" href="./modules/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/style.css">
-
+    <link rel="shortcut icon" href="./images/patch-question-fill.svg" type="image/x-icon">
 </head>
 
 <body class="bg-light">
