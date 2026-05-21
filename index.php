@@ -48,7 +48,7 @@ require_once __DIR__ . "\Controllers\QuizController.php";
     <div>
         <input type="hidden" id="answered-count" value="<?= count($answers) ?>">
         <input type="hidden" id="quiz-count" value="<?= ($myQuiz->getCount()) ?>">
-        <input type="hidden" id="this-answered" value="<?= isset($answers[$index]) ? 1 : 0 ?>">
+        <input type="hidden" id="this-answered" value="<?= isset($answers[$actualQuestionIndex]) ? 1 : 0 ?>">
         <script src="./scripts/checkForm.js"></script>
     </div>
 </body>
