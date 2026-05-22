@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Oldal-1" id="FCJ94gR-Hhs8GxeCUWph">
-    <mxGraphModel dx="2570" dy="1428" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="975" dy="541" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -92,23 +92,26 @@
         <mxCell id="QErhvY5_i5o2afiaz8UU-26" parent="QErhvY5_i5o2afiaz8UU-30" style="text;html=1;whiteSpace=wrap;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;rounded=0;" value="questions.json" vertex="1">
           <mxGeometry height="27.22222222222222" width="100" x="280" y="54.44444444444444" as="geometry" />
         </mxCell>
-        <mxCell id="QErhvY5_i5o2afiaz8UU-36" connectable="0" parent="1" style="group" value="" vertex="1">
-          <mxGeometry height="480" width="740" x="860" y="20" as="geometry" />
+        <mxCell id="BvTRnIKik3vrh-1jExwT-4" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="650" width="740" x="860" y="20" as="geometry" />
         </mxCell>
-        <mxCell id="QErhvY5_i5o2afiaz8UU-29" parent="QErhvY5_i5o2afiaz8UU-36" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="" vertex="1">
-          <mxGeometry height="480" width="740" as="geometry" />
+        <mxCell id="QErhvY5_i5o2afiaz8UU-29" parent="BvTRnIKik3vrh-1jExwT-4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="" vertex="1">
+          <mxGeometry height="650" width="740" as="geometry" />
         </mxCell>
-        <mxCell id="QErhvY5_i5o2afiaz8UU-34" connectable="0" parent="QErhvY5_i5o2afiaz8UU-36" style="group" value="" vertex="1">
-          <mxGeometry height="413.3333333333333" width="410" x="166" y="35.55555555555556" as="geometry" />
+        <mxCell id="BvTRnIKik3vrh-1jExwT-3" connectable="0" parent="BvTRnIKik3vrh-1jExwT-4" style="group" value="" vertex="1">
+          <mxGeometry height="590" width="420" x="160" y="35.55555555555556" as="geometry" />
         </mxCell>
-        <mxCell id="QErhvY5_i5o2afiaz8UU-20" parent="QErhvY5_i5o2afiaz8UU-34" style="whiteSpace=wrap;html=1;align=left;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;b&gt;Quiz Class:&lt;/b&gt;&lt;div&gt;- számon tarja a megszerzett pontszámokat, és szolgáltatja a kérdéseket&lt;div&gt;&lt;div&gt;- private int $quizLength - kérdéssor hossza&lt;/div&gt;&lt;div&gt;- private array $questions - kérdés classek listája&lt;/div&gt;&lt;div&gt;- public array $stat - megszerzett pontszámok&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="97.77777777777777" width="410" y="159.99999999999997" as="geometry" />
+        <mxCell id="BvTRnIKik3vrh-1jExwT-1" parent="BvTRnIKik3vrh-1jExwT-3" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;b&gt;Session&lt;/b&gt;&lt;div&gt;- perzisztens adatok eltárolása, (pl.: újratöltéskor is):&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- step - kérdés sorszáma&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- stat - jelenlegi pontszám&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- answers - adott válaszok&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- question_order - random kérdés sorrend&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- adatok élettartalma:&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- quiz végéig&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="165.56" width="420" y="424.44" as="geometry" />
         </mxCell>
-        <mxCell id="QErhvY5_i5o2afiaz8UU-21" parent="QErhvY5_i5o2afiaz8UU-34" style="whiteSpace=wrap;html=1;align=left;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;b&gt;Question Class:&lt;/b&gt;&lt;div&gt;- kérdések wrapper classe, egy kérdésnek a funkcióit hordozza&lt;div&gt;&lt;div&gt;- private string $question - kérdés szövegként&lt;/div&gt;&lt;div&gt;- private array $answers - kérdés lehetséges válaszai&lt;/div&gt;&lt;div&gt;- private int $answerID - a helyes válasz sorszáma&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- isCorrect - ellenőrzi, hogy helyes a megadott válasz&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="142.22222222222223" width="410" y="271.1111111111111" as="geometry" />
+        <mxCell id="QErhvY5_i5o2afiaz8UU-20" parent="BvTRnIKik3vrh-1jExwT-3" style="whiteSpace=wrap;html=1;align=left;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;b&gt;Quiz Class:&lt;/b&gt;&lt;div&gt;- számon tarja a megszerzett pontszámokat, és szolgáltatja a kérdéseket&lt;div&gt;&lt;div&gt;- private int $quizLength - kérdéssor hossza&lt;/div&gt;&lt;div&gt;- private array $questions - kérdés classek listája&lt;/div&gt;&lt;div&gt;- public array $stat - megszerzett pontszámok&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="97.77777777777777" width="410" x="6" y="160" as="geometry" />
         </mxCell>
-        <mxCell id="QErhvY5_i5o2afiaz8UU-27" parent="QErhvY5_i5o2afiaz8UU-34" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Question &lt;b&gt;Data modell&lt;/b&gt;: (./data/questions.json)&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;question&quot;: &quot;Milyen évet írunk?&quot; // kérdés szövegként,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;answers&quot;: [&quot;1926&quot;, &quot;2018&quot;, &quot;2025&quot;, &quot;2026&quot;]&amp;nbsp; // lehetséges válaszok,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;answerID&quot;: 3 // helyes válasz sorszáma&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="142.22222222222223" width="410" as="geometry" />
+        <mxCell id="QErhvY5_i5o2afiaz8UU-21" parent="BvTRnIKik3vrh-1jExwT-3" style="whiteSpace=wrap;html=1;align=left;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;b&gt;Question Class:&lt;/b&gt;&lt;div&gt;- kérdések wrapper classe, egy kérdésnek a funkcióit hordozza&lt;div&gt;&lt;div&gt;- private string $question - kérdés szövegként&lt;/div&gt;&lt;div&gt;- private array $answers - kérdés lehetséges válaszai&lt;/div&gt;&lt;div&gt;- private int $answerID - a helyes válasz sorszáma&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- isCorrect - ellenőrzi, hogy helyes a megadott válasz&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="142.22222222222223" width="410" x="6" y="271.1111111111111" as="geometry" />
+        </mxCell>
+        <mxCell id="QErhvY5_i5o2afiaz8UU-27" parent="BvTRnIKik3vrh-1jExwT-3" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Question &lt;b&gt;Data modell&lt;/b&gt;: (./data/questions.json)&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;question&quot;: &quot;Milyen évet írunk?&quot; // kérdés szövegként,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;answers&quot;: [&quot;1926&quot;, &quot;2018&quot;, &quot;2025&quot;, &quot;2026&quot;]&amp;nbsp; // lehetséges válaszok,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;answerID&quot;: 3 // helyes válasz sorszáma&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="142.22222222222223" width="410" x="6" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
