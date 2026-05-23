@@ -28,17 +28,20 @@ if(!defined('PROTECTED')){
                     <tbody>
                         <?php
                         $counter = 0;
-                        foreach($myQuiz->getStat() as $index => $stat):
-                            $passedQuestion = ($stat == 1);
-                            $question = $myQuiz->getQuestion($index);
+                        $statArray = $myQuiz->getStat();
+                        foreach($questionOrder as $actualIndex):
 
-                            $answer = $myQuiz->getAnswer($counter, $answers[$index]);
+                            $stat = $statArray[$actualIndex] ?? 0; 
+                            $passedQuestion = ($stat == 1);
+                            $question = $myQuiz->getQuestion($actualIndex);
+
+                            $userChoice = $answers[$actualIndex] ?? null;
+                            $answer = $myQuiz->getAnswer($actualIndex, $userChoice);
 
                             $emoji = $passedQuestion ? "✅" : "❌";
-                            $counter++;
                         ?>
                         <tr class="table-<?= $passedQuestion ? "success" : "danger" ?>">
-                            <td><?= $counter ?></td>
+                            <td><?= ++$counter ?></td>
                             <td title="<?= $question ?>" class="s-question"><?= $question ?></td>
                             <td title="<?= $answer ?>" class="s-answer"><?= $answer ?></td>
                             <td><?= $emoji ?></td>
